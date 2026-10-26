@@ -1,4 +1,4 @@
-name: BakaSU Build
+name: rosemary BakaSU
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   build:
-    name: Build BakaSU kernel
+    name: rosemary BakaSU kernel
     runs-on: ubuntu-22.04
     timeout-minutes: 240
     env:
