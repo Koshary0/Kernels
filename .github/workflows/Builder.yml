@@ -22,10 +22,10 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - codename: surya
-            defconfig: surya_defconfig
-            repo: https://github.com/LineageOS/android_kernel_xiaomi_surya.git
-            branch: "lineage-22.2"
+          - codename: device_codename
+            defconfig: device_defconfig
+            repo: kernel_source
+            branch: "Branch"
     env:
       DEVICE_CODENAME: ${{ matrix.codename }}
       DEFCONFIG: ${{ matrix.defconfig }}
