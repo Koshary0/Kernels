@@ -1,4 +1,4 @@
-name: BakaSU Build
+name: Kernels
 
 on:
   workflow_dispatch:
@@ -22,16 +22,10 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          # ===== DEVICE SETTINGS: edit only the 4 lines of this entry =====
           - codename: rosemary
             defconfig: rosemary_defconfig
             repo: https://github.com/LineageOS/android_kernel_xiaomi_mt6785.git
             branch: "lineage-23.2"
-          # ===== optional 2nd device: remove the leading "# " to build it too =====
-          # - codename: ruby
-          #   defconfig: ruby_defconfig
-          #   repo: https://github.com/crdroidandroid/android_kernel_xiaomi_mt6877.git
-          #   branch: "16.0"
     env:
       DEVICE_CODENAME: ${{ matrix.codename }}
       DEFCONFIG: ${{ matrix.defconfig }}
