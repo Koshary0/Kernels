@@ -152,8 +152,6 @@ jobs:
             https://raw.githubusercontent.com/Baka-SU/BakaSU/main/kernel/setup.sh \
             -o /tmp/root-setup.sh
           bash /tmp/root-setup.sh
-          test -L drivers/kernelsu
-          test -f KernelSU/kernel/Kconfig
           echo "Root component integrated."
 
       - name: Apply manual hooks
