@@ -22,10 +22,10 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - codename: rosemary
-            defconfig: rosemary_defconfig
-            repo: https://github.com/LineageOS/android_kernel_xiaomi_mt6785.git
-            branch: "lineage-23.2"
+          - codename: surya
+            defconfig: surya_defconfig
+            repo: https://github.com/crdroidandroid/android_kernel_xiaomi_surya.git
+            branch: "16.0"
     env:
       DEVICE_CODENAME: ${{ matrix.codename }}
       DEFCONFIG: ${{ matrix.defconfig }}
